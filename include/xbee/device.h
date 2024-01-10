@@ -462,6 +462,10 @@ typedef struct xbee_dev_t
       char           escape_char;   ///< value of CC (default '+')
    #endif
 
+   // GLADSON: Pointer the the array of frame handlers. Major change in the library,
+   // it will break all sample code.
+   xbee_dispatch_table_entry_t** xbee_frame_handlers_ptr;
+
    /// Buffer and state variables used for receiving a frame.  Keep at the
    /// end of the structure since frame_data can be large.
    struct rx {
