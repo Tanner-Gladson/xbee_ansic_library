@@ -514,7 +514,7 @@ extern const xbee_dispatch_table_entry_t xbee_frame_handlers[];
 uint8_t xbee_next_frame_id( xbee_dev_t *xbee);
 
 int xbee_dev_init( xbee_dev_t *xbee, const xbee_serial_t *serport,
-   xbee_is_awake_fn is_awake, xbee_reset_fn reset);
+                                 xbee_is_awake_fn is_awake, xbee_reset_fn reset, xbee_dispatch_table_entry_t* xbee_frame_handlers_ptr)
 
 void xbee_dev_dump_settings( xbee_dev_t *xbee, uint16_t flags);
    #define XBEE_DEV_DUMP_FLAG_NONE        0x0000
